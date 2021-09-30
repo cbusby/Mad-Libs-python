@@ -11,7 +11,7 @@ Scenario: A user can add a word to the story.
 		Given the story needs a word
 		When the user is asked for a word
 		Then the user can see what to type (noun, verb, preposition, etc.)
-        And can input a word
+        	And can input a word
 
 Feature: Print
 
@@ -51,7 +51,7 @@ Feature: Print an error message
 Scenario: A user accidentally types a character that does not make sense like “@”,”$”,”^”, or, “?”. The game gives an error message to let the user know of their mistake.
 
 		Given a user is prompted to input a word
-        When a user has input an illegal character
+        	When a user has input an illegal character
 		Then the game prints an error message “Illegal character in string. Please input a new word.”
 		And the game reprompts them to input a word
 
@@ -68,10 +68,10 @@ Feature: Define a part of speech
 
 Scenario: A user is asked for a preposition but they forgot what that is. The can type “--help” and the part of speech is defined.
 
-        Given a user is prompted to input a word
-        When the user inputs “--help”
-        Then the game prints the definition of the part of speech
-        And asks the user to input the word once more
+		Given a user is prompted to input a word
+		When the user inputs “--help”
+		Then the game prints the definition of the part of speech
+		And asks the user to input the word once more
 
 Feature: Choose a story to play
 
